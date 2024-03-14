@@ -17,7 +17,7 @@ app.get('/client/:file', (req, res) => {
 });
 
 app.get('/dist/:file', (req, res) => {
-    const filepath = path.join(__dirname, '../dist', req.params.file);
+    const filepath = path.join(__dirname, '../dist/client', req.params.file);
     res.sendFile(filepath);
 });
 
