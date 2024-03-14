@@ -11,20 +11,12 @@ export const io = new Server(server);
 app.use(express.json());
 app.use(cookieParser());
 
-app.get('/client/:file', (req, res) => {
-    const filepath = path.join(__dirname, '../client', req.params.file);
-    res.setHeader('Content-Type', 'application/javascript');
-    res.sendFile(filepath);
-});
+// Serve static files from the 'dist/client' directory
+app.use('/dist', express.static(path.join(__dirname, '../dist/client')));
 
-app.get('/dist/:file', (req, res) => {
-    const filepath = path.join(__dirname, '../dist/client', req.params.file);
-    res.setHeader('Content-Type', 'application/javascript');
-    res.sendFile(filepath);
-});
-
+// Serve the index.html file for the root route
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 const port = process.env.PORT || 8001;
