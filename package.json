@@ -30,7 +30,10 @@
     "devDependencies": {
         "@types/cookie-parser": "latest",
         "@types/leaflet": "latest",
+        "css-loader": "^6.10.0",
         "nodemon": "latest",
+        "postcss-loader": "^8.1.1",
+        "style-loader": "^3.3.4",
         "ts-loader": "^9.5.1",
         "ts-node": "latest",
         "typescript": "latest",
