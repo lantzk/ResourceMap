@@ -9,14 +9,31 @@
         "build": "echo 'Build script not needed with Bun'"
     },
     "dependencies": {
-      "express": "latest",
-      "sqlite3": "latest"
+        "@types/express": "latest",
+        "@types/react": "latest",
+        "@types/react-dom": "latest",
+        "@types/react-leaflet": "latest",
+        "@types/socket.io": "latest",
+        "@types/sqlite3": "latest",
+        "bun": "latest",
+        "cookie-parser": "latest",
+        "esbuild": "latest",
+        "express": "latest",
+        "leaflet": "latest",
+        "react": "latest",
+        "react-dom": "latest",
+        "react-leaflet": "latest",
+        "socket.io": "latest",
+        "socket.io-client": "latest",
+        "sqlite3": "latest",
+        "tailwindcss": "latest"
     },
     "devDependencies": {
-      "@types/express": "latest",
-      "@types/sqlite3": "latest",
-      "nodemon": "latest",
-      "ts-node": "latest",
-      "typescript": "latest"
+        "@types/express": "latest",
+        "@types/leaflet": "^1.9.8",
+        "@types/sqlite3": "latest",
+        "nodemon": "latest",
+        "ts-node": "latest",
+        "typescript": "latest"
     }
-  }
+}

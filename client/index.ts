@@ -1,5 +1,5 @@
 import express from 'express';
-import { initializeDatabase, seedConflictZones, getConflictZones } from './db';
+import { initializeDatabase, seedConflictZones, getConflictZones } from '../server/db';
 import { GetZonesResponse } from '../shared/types';
 
 const app = express();

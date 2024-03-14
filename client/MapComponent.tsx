@@ -1,8 +1,18 @@
-
 import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { LatLngExpression } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { ConflictZone, GetZonesResponse } from '../shared/types';
+
+const SetViewWhenReady: React.FC<{ center: LatLngExpression; zoom: number }> = ({ center, zoom }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    map.setView(center, zoom);
+  }, [map, center, zoom]);
+
+  return null;
+};
 
 export const MapComponent: React.FC = () => {
   const [conflictZones, setConflictZones] = useState<ConflictZone[]>([]);
@@ -21,8 +31,12 @@ export const MapComponent: React.FC = () => {
     }
   };
 
+  const initialCenter: LatLngExpression = [0, 0];
+  const initialZoom: number = 2;
+
   return (
-    <MapContainer center={[0, 0]} zoom={2} style={{ height: '400px' }}>
+    <MapContainer style={{ height: '400px' }}>
+      <SetViewWhenReady center={initialCenter} zoom={initialZoom} />
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {conflictZones.map((zone) => (
         <Marker key={zone.id} position={[zone.latitude, zone.longitude]}>

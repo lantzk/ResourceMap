@@ -1,4 +1,5 @@
 import sqlite3 from 'sqlite3';
+import { ConflictZone } from '../shared/types';
 
 const db = new sqlite3.Database(':memory:');
 
