@@ -1,6 +1,6 @@
 # Introduction
 
-ResourceMap is a demo project for testing out TypeScript, socket.io, sqlite, react, express, and bun.
+ResourceMap is a demo project for testing out TypeScript, socket.io, sqlite, react, express, etc.
 
 ## Routes
 
