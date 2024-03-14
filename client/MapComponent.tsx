@@ -35,17 +35,19 @@ export const MapComponent: React.FC = () => {
   const initialZoom: number = 2;
 
   return (
-    <MapContainer style={{ height: '400px' }}>
-      <SetViewWhenReady center={initialCenter} zoom={initialZoom} />
-      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      {conflictZones.map((zone) => (
-        <Marker key={zone.id} position={[zone.latitude, zone.longitude]}>
-          <Popup>
-            <h3>{zone.name}</h3>
-            <p>{zone.description}</p>
-          </Popup>
-        </Marker>
-      ))}
-    </MapContainer>
+    <div>
+      <MapContainer style={{ height: '400px' }}>
+        <SetViewWhenReady center={initialCenter} zoom={initialZoom} />
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        {conflictZones.map((zone) => (
+          <Marker key={zone.id} position={[zone.latitude, zone.longitude]}>
+            <Popup>
+              <h3>{zone.name}</h3>
+              <p>{zone.description}</p>
+            </Popup>
+          </Marker>
+        ))}
+      </MapContainer>
+    </div>
   );
 };

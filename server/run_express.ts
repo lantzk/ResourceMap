@@ -13,11 +13,13 @@ app.use(cookieParser());
 
 app.get('/client/:file', (req, res) => {
     const filepath = path.join(__dirname, '../client', req.params.file);
+    res.setHeader('Content-Type', 'application/javascript');
     res.sendFile(filepath);
 });
 
 app.get('/dist/:file', (req, res) => {
     const filepath = path.join(__dirname, '../dist/client', req.params.file);
+    res.setHeader('Content-Type', 'application/javascript');
     res.sendFile(filepath);
 });
 

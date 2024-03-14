@@ -6,7 +6,7 @@ import './index.css';
 const App: React.FC = () => {
   return (
     <div className="container mx-auto">
-      <h1 className="text-3xl font-bold mb-4">Resource Conflict Zone Map</h1>
+      <h1 className="text-3xl font-bold mb-4">ResourceMap</h1>
       <MapComponent />
     </div>
   );
