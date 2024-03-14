@@ -1,6 +1,7 @@
 import express from 'express';
 import { initializeDatabase, seedConflictZones, getConflictZones } from '../server/db';
 import { GetZonesResponse } from '../shared/types';
+import './index.css';
 
 const app = express();
 
