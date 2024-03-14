@@ -13,6 +13,10 @@ initializeDatabase()
     console.error('Error initializing database:', err);
   });
 
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
+
 app.get('/api/zones', async (req, res) => {
   try {
     const zones = await getConflictZones();
