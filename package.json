@@ -6,7 +6,8 @@
     "scripts": {
         "start": "bun run server/index.ts",
         "dev": "bun run --watch server/index.ts",
-        "build": "echo 'Build script not needed with Bun'"
+        "build": "echo 'Build script not needed with Bun'",
+        "postinstall": "bun run node_modules/sqlite3/install.js"
     },
     "dependencies": {
         "@types/express": "latest",
@@ -15,8 +16,8 @@
         "@types/react-leaflet": "latest",
         "@types/socket.io": "latest",
         "@types/sqlite3": "latest",
-        "bun": "latest",
         "cookie-parser": "latest",
+        "bun": "latest",
         "esbuild": "latest",
         "express": "latest",
         "leaflet": "latest",
@@ -29,6 +30,7 @@
         "tailwindcss": "latest"
     },
     "devDependencies": {
+        "@types/cookie-parser": "^1.4.7",
         "@types/express": "latest",
         "@types/leaflet": "^1.9.8",
         "@types/sqlite3": "latest",

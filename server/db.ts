@@ -25,7 +25,7 @@ export function initializeDatabase() {
 
 export function getConflictZones(): Promise<ConflictZone[]> {
   return new Promise((resolve, reject) => {
-    db.all('SELECT * FROM conflict_zones', (err, rows) => {
+    db.all('SELECT * FROM conflict_zones', (err, rows: ConflictZone[]) => {
       if (err) {
         reject(err);
       } else {
