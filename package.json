@@ -3,10 +3,11 @@
     "version": "1.0.0",
     "description": "Application that shows potential future conflict zones over resources on a map",
     "main": "server/index.ts",
+    "type": "module",
     "scripts": {
         "start": "node server/index.ts",
         "dev": "nodemon --watch server/index.ts",
-        "build": "webpack"
+        "build": "tsc"
     },
     "dependencies": {
         "@types/express": "latest",

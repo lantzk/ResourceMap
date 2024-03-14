@@ -7,8 +7,11 @@ RUN npm install
 
 COPY . .
 
+RUN npm install tailwindcss autoprefixer
+RUN npm install -D ts-node
+
 RUN npm run build
 
 EXPOSE 8001
 
-CMD ["npm", "start"]
+CMD ["npx", "ts-node", "server/index.ts"]
