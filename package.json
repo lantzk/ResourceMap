@@ -1,0 +1,30 @@
+{
+    "name": "resource-conflict-zone-map",
+    "version": "1.0.0",
+    "description": "Application that shows potential future conflict zones over resources on a map",
+    "main": "server/index.ts",
+    "scripts": {
+        "start": "bun server/run.ts",
+        "dev": "bun i && bun --watch server/index.ts"
+    },
+    "dependencies": {
+        "bun": "latest",
+        "express": "latest",
+        "socket.io": "latest",
+        "sqlite3": "latest",
+        "react": "latest",
+        "react-dom": "latest",
+        "leaflet": "latest",
+        "react-leaflet": "latest",
+        "tailwindcss": "latest",
+        "@types/express": "latest",
+        "@types/socket.io": "latest",
+        "@types/sqlite3": "latest",
+        "@types/react": "latest",
+        "@types/react-dom": "latest",
+        "@types/leaflet": "latest",
+        "esbuild": "latest",
+        "socket.io-client": "latest",
+        "cookie-parser": "latest"
+    }
+}
